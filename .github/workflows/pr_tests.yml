@@ -11,7 +11,7 @@ jobs:
     # Restrict GITHUB_TOKEN to no permissions to make this "safe"
     permissions: {}
     outputs:
-      output1: ${{ steps.run_tests.outputs.status }}
+      result: ${{ steps.run_tests.outputs.status }}
     steps:
       - uses: actions/checkout@v4
         with:
