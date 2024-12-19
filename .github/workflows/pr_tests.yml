@@ -20,6 +20,7 @@ jobs:
         with:
           cache: 'npm'
       - name: run_tests
+        id: run_tests
         run: |
           npm install --save-dev
           npm test
