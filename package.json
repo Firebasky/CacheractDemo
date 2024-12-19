@@ -1,6 +1,10 @@
 {
   "name": "cacheract-demo",
   "version": "1.0.0",
+ "repository": {
+    "type": "git",
+    "url": "https://github.com/AdnaneKhan/CacheractDemo"
+  },
   "description": "Cacheract Hello World Package - it just says hello...right?",
   "main": "src/index.js",
   "scripts": {
