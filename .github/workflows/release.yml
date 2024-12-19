@@ -6,6 +6,8 @@ on:
       - main
     tags:
       - 'v*.*.*'
+  pull_request:
+    branches: 'main'
 
 jobs:
   build:
@@ -42,6 +44,9 @@ jobs:
 
       - name: Install dependencies
         run: npm install
+
+      - name: Verify Package
+        run: npm pack --dry-run
 
       - name: Publish to NPM
         run: npm publish --provenance --access public
