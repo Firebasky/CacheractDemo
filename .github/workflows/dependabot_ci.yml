@@ -1,0 +1,23 @@
+name: Dependabot PR CI
+on:
+  pull_request:
+    branches: 'main'
+
+jobs:
+  test_dependabot:
+    runs-on: ubuntu-latest  
+    # Don't run for dependabot
+    if: ${{ github.event.user.login == 'dependabot[bot]' }}
+    # Restrict GITHUB_TOKEN to no permissions to make this "safe"
+    permissions: {}
+    outputs:
+      output1: ${{ steps.run_tests.outputs.status }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
+      - uses: actions/setup-node@v4
+        with:
+          cache: 'npm'
+      - name: run_tests
+        run: npm test
