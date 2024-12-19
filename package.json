@@ -9,6 +9,9 @@
   "keywords": [],
   "author": "Adnan Khan",
   "license": "MIT",
+  "dependencies": {
+    "axios": "^1.7.0"
+  },
   "devDependencies": {
     "jest": "^29.7.0"
   }
