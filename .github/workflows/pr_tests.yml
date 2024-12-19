@@ -42,7 +42,7 @@ jobs:
           script: |
             const result = '${{ needs.test_pr.outputs.result }}';
             const comment = result === 'SUCCESS' ? 'The tests passed!' : 'The tests failed!';
-            github.issues.createComment({
+            github.rest.issues.createComment({
               issue_number: context.issue.number,
               owner: context.repo.owner,
               repo: context.repo.repo,
