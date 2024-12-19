@@ -7,7 +7,7 @@ jobs:
   test_dependabot:
     runs-on: ubuntu-latest  
     # Don't run for dependabot
-    if: ${{ github.event.user.login == 'dependabot[bot]' }}
+    if: ${{ github.event.pull_request.user.login == 'dependabot[bot]' }}
     # Restrict GITHUB_TOKEN to no permissions to make this "safe"
     permissions: {}
     outputs:
