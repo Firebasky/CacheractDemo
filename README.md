@@ -1,5 +1,5 @@
 # Cacheract Demo Repository
 
-Demo repository demonstrating how Cacheract can automatically poison releases to NPM.
+Demo repository demonstrating how Cacheract can automatically poison releases to NPM. Mainly to generate screenshots for an upcoming blog post on the tool.
 
 See https://github.com/adnaneKhan/cacheract for tool details and how-to guide.
